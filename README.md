@@ -2,7 +2,12 @@
 
 A production-ready, highly responsive **Tax Loss Harvesting** web application built for the KoinX Frontend Internship Assignment.
 
-![Tax Loss Harvesting Interface](https://raw.githubusercontent.com/placeholder/screenshot.png)
+---
+
+## 🔗 Submission Details
+
+- **GitHub Repository**: [https://github.com/Palash-oss/KoinX---Tax-Loss-Harvesting-Assignment](https://github.com/Palash-oss/KoinX---Tax-Loss-Harvesting-Assignment)
+- **Official Submission Form**: [https://forms.gle/kx1EQWT2yh3NKQcK7](https://forms.gle/kx1EQWT2yh3NKQcK7)
 
 ---
 
@@ -10,13 +15,18 @@ A production-ready, highly responsive **Tax Loss Harvesting** web application bu
 
 - 📊 **Real-time Capital Gains Calculation**: Compares **Pre-Harvesting** baseline capital gains against **After-Harvesting** live estimates as assets are selected.
 - 💰 **Tax Savings Announcement**: Highlights exact tax savings (`You're going to save ₹X`) whenever loss harvesting reduces overall realised capital gains.
-- ⚡ **Mock API Layer with Simulated Latency**: Real async API functions (`getHoldings` and `getCapitalGains`) with 500ms latency and loading skeleton UI.
+- 🌙 **Dark & Light Mode Support**: Seamless theme switching via the header Sun/Moon button, persisting preference in `localStorage`.
+- 🏷️ **Complete Asset Symbol Badges**: Custom, vibrant brand icons for all 26 assets (BTC, ETH, USDT, USDC, MATIC, SOL, WETH, WPOL, GONE, SLN, OX, FLAME, PIG, CULO, QUICK, DFYN, LINK, BLOK, SPHERE, TRADE, WELT, FTM, EZ, FRM, TITAN).
+- ⚡ **Mock API Layer with Simulated Latency**: Real async API functions (`getHoldings` and `getCapitalGains`) with 500ms latency and pulse loading skeleton UI.
+- 📈 **Live Ticker Toggle**: Optional real-time market price fluctuation mode (±0.2% every 3s).
 - ⚠️ **Dev Error State Simulator**: Header toggle button to simulate server rejections, rendering an interactive error state with a retry mechanism.
+- ℹ️ **Important Notes & Disclaimers Accordion**: Expandable banner covering all 5 key Indian tax guidelines and CoinGecko pricing notes from Figma.
+- 💡 **"How it works?" Modal**: Interactive guide explaining Tax Loss Harvesting principles.
 - 🔍 **Search, Filter & Sorting**:
   - Filter by All Assets, Loss-Making Assets, or Profit-Making Assets.
   - Sort by STCG Impact (default), LTCG Impact, Asset Name (A-Z), or Total Balance.
-- 📱 **Full Mobile Responsiveness**: Cards stack vertically and the table supports smooth horizontal scrolling on mobile screens.
-- 🔄 **View All / Show Less Pagination**: Toggle between top 10 assets and full 25 portfolio holdings.
+- 📱 **Full Mobile Responsiveness**: Stacked card layout and horizontal scrolling table for mobile viewports.
+- 🔄 **View All / Show Less Pagination**: Toggle between top 10 assets and full portfolio holdings.
 - ⚛️ **State Management via React Context**: Centralized `HarvestingProvider` preventing prop drilling.
 
 ---
@@ -27,7 +37,7 @@ A production-ready, highly responsive **Tax Loss Harvesting** web application bu
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS v4 + Custom Inter Typography
 - **Icons**: Lucide React
-- **State Management**: React Context (`HarvestingContext`)
+- **State Management**: React Context (`HarvestingContext` & `ThemeContext`)
 
 ---
 
@@ -35,7 +45,7 @@ A production-ready, highly responsive **Tax Loss Harvesting** web application bu
 
 1. **Clone the repository**:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/Palash-oss/KoinX---Tax-Loss-Harvesting-Assignment.git
    cd KoinX---Tax-Loss-Harvesting-Assignment
    ```
 
@@ -109,32 +119,23 @@ $$\text{Tax Savings} = \text{Pre-Harvesting Realised Gains} - \text{Post-Harvest
 
 ## 🚀 Deployment Instructions
 
-### 1. Initialize Git Repository & Push to GitHub
-
-Run these commands in your project root folder:
-
+### 1. Push to GitHub
 ```bash
-git init
-git add .
-git commit -m "Initial commit: Production-ready Tax Loss Harvesting React App"
-git branch -M main
-git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/koinx-tax-loss-harvesting.git
-git push -u origin main
+git add README.md
+git commit -m "docs: Update README with exact repository URL and submission checklist"
+git push origin main
 ```
 
 ### 2. Deploy to Vercel (CLI or Dashboard)
 
 #### Option A: Using Vercel CLI (Recommended)
 ```bash
-# Install Vercel CLI globally (if not already installed)
 npm install -g vercel
-
-# Deploy directly from terminal
-vercel
+vercel --prod
 ```
 
 #### Option B: Deploying via Vercel Web Dashboard
 1. Go to [vercel.com/new](https://vercel.com/new).
-2. Import your GitHub repository `koinx-tax-loss-harvesting`.
+2. Import your GitHub repository `Palash-oss/KoinX---Tax-Loss-Harvesting-Assignment`.
 3. Keep default settings (`Vite` framework preset).
 4. Click **Deploy**.
